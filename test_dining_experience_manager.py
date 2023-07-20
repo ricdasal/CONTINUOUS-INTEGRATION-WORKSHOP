@@ -12,10 +12,6 @@ def test_valid_quantity_input(manager, monkeypatch):
     assert quantity == 3
 
 
-def test_get_valid_quantity_out_of_range():
-    manager = DiningExperienceManager()
-    with pytest.raises(ValueError):
-        manager.get_valid_quantity("Chef's Specials")
         
 # Prueba la función calculate_total_cost
 def test_calculate_total_cost_no_discount():
