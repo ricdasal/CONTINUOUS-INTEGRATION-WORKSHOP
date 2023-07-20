@@ -31,6 +31,7 @@ class DiningExperienceManager:
                 else:
                     return quantity
             except ValueError:
+                quantity = 0
                 print("Invalid input. Please enter a valid quantity.")
 
     def calculate_total_cost(self, order):
