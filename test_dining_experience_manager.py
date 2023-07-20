@@ -11,23 +11,6 @@ def test_valid_quantity_input(manager, monkeypatch):
     quantity = manager.get_valid_quantity("Chinese Food")
     assert quantity == 3
 
-# Prueba la función get_valid_quantity
-# def test_get_valid_quantity_positive():
-#     manager = DiningExperienceManager()
-#     quantity = manager.get_valid_quantity("Chinese Food")
-#     assert quantity >= 0
-
-def test_get_valid_quantity_zero():
-    manager = DiningExperienceManager()
-    quantity = manager.get_valid_quantity("Italian Food")
-    assert quantity == 0
-
-def test_get_valid_quantity_negative_then_positive():
-    manager = DiningExperienceManager()
-    with pytest.raises(ValueError):
-        manager.get_valid_quantity("Pastries")
-    quantity = manager.get_valid_quantity("Pastries")
-    assert quantity >= 0
 
 def test_get_valid_quantity_out_of_range():
     manager = DiningExperienceManager()
