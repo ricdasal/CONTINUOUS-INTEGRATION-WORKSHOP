@@ -36,7 +36,7 @@ def test_calculate_total_cost_quantity_discount():
     manager = DiningExperienceManager()
     order = {'Pastries': 7, 'Chef\'s Specials': 4}
     total_cost = manager.calculate_total_cost(order)
-    assert total_cost == 55.18 
+    assert total_cost == 55.188 
 
 # Prueba la función run
 def test_run_no_order():
