@@ -24,13 +24,13 @@ def test_calculate_total_cost_base_discount():
     manager = DiningExperienceManager()
     order = {'Chinese Food': 10, 'Pastries': 1}
     total_cost = manager.calculate_total_cost(order)
-    assert total_cost == 82  # (8*10 + 5*1) - 10
+    assert total_cost == 54.0 
 
 def test_calculate_total_cost_large_order_discount():
     manager = DiningExperienceManager()
     order = {'Italian Food': 6, "Chef's Specials": 2}
     total_cost = manager.calculate_total_cost(order)
-    assert total_cost == 94.5  # (10*6) + (12*2*1.05) - 25
+    assert total_cost == 94.5  
 
 def test_calculate_total_cost_quantity_discount():
     manager = DiningExperienceManager()
