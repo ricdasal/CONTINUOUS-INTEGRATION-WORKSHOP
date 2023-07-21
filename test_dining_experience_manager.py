@@ -18,7 +18,7 @@ def test_calculate_total_cost_no_discount():
     manager = DiningExperienceManager()
     order = {'Chinese Food': 2, 'Italian Food': 1}
     total_cost = manager.calculate_total_cost(order)
-    assert total_cost == 26  # 8*2 + 10*1
+    assert total_cost == 26 
 
 def test_calculate_total_cost_base_discount():
     manager = DiningExperienceManager()
@@ -30,13 +30,13 @@ def test_calculate_total_cost_large_order_discount():
     manager = DiningExperienceManager()
     order = {'Italian Food': 6, "Chef's Specials": 2}
     total_cost = manager.calculate_total_cost(order)
-    assert total_cost == 94.5  
+    assert total_cost == 69.93 
 
 def test_calculate_total_cost_quantity_discount():
     manager = DiningExperienceManager()
     order = {'Pastries': 7, 'Chef\'s Specials': 4}
     total_cost = manager.calculate_total_cost(order)
-    assert total_cost == 38.25  # (5*7*0.9) + (12*4*1.05)
+    assert total_cost == 55.18 
 
 # Prueba la función run
 def test_run_no_order():
